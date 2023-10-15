@@ -1,3 +1,13 @@
+<script type="text/javascript">
+    function isless(x, y) {
+        return (x < y)
+    };
+</script>
+
+<script type="text/javascript">
+    var checkAnswer = [];
+</script>
+    
 [[jsxgraph width="800px" input-ref-ans_DH1='DH1Ref' input-ref-ans_DH2='DH2Ref' input-ref-ans_Ea1='Ea1Ref' input-ref-ans_Ea2='Ea2Ref' input-ref-ans_Ear1='Ear1Ref' input-ref-ans_Ear2='Ear2Ref' input-ref-ans_react='reactRef' input-ref-ans_prod='prodRef' input-ref-ans_leftslider='leftslider' input-ref-ans_rightslider='rightslider' input-ref-ans_topslider='topslider']]
 
 var nameRef ={reacttxt:{#reacttxt#}, prodtxt:{#prodtxt#},mrkH:'',mrkE:'', p:["","","","","",""],chkd:false};
