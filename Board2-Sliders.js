@@ -213,7 +213,7 @@ strokeColor: 'black',
 strokeWidth: 3,
 fixed: true
 });
-board.create('text',[function(){return leftX1()-0.5},15,{#y_title#}],{cssStyle:'direction:rtl',fontSize: 18, fixed:true,color:'black', rotate: 90,showInfobox:false, useMathjax: true,display: 'internal'});
+board.create('text',[function(){return leftX1()-0.5},{#y_label#},{#y_title#}],{cssStyle:'direction:rtl',fontSize: 18, fixed:true,color:'black', rotate: 90,showInfobox:false, useMathjax: true,display: 'internal'});
 
 board.create('text',[rightX1(),-17,{#x_title#}],{fixed:true, fontSize: 18, color:'black',showInfobox:false, useMathjax: true});
 board.update();
