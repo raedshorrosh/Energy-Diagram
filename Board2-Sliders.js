@@ -411,7 +411,7 @@ if (content !== null) {
 if  ( !(nameRef.chkd)) {
  nameRef.chkd=true;
 let grade =JSON.parse(content);
-for (let i = 0; i !=12; i++) {checkAnswer(i,grade[i])};
+for (let i = 0; i !=11; i++) {checkAnswer(i,grade[i])};
 console.log(grade);
 board.update();  
 }}});
