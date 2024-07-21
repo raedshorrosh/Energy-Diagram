@@ -380,14 +380,14 @@ board.update();
 break;
 case 8:
 if (mrk == 1) {
-nameRef.mrkH='<span style="font-size: 1.25em; color:green;">✔</i></span>'}
+nameRef.mrkH='<span style="font-size: 1.25em; color:green;">✔</span>'}
 else {
 nameRef.mrkH='<span style="font-size: 1.0em; color:red;">❌</span>' }
 board.update();
 break;
 case 9:
 if (mrk == 1) {
-nameRef.mrkE='<span style="font-size: 1.25em; color:green;">✔></i></span>'}
+nameRef.mrkE='<span style="font-size: 1.25em; color:green;">✔</span>'}
 else {
 nameRef.mrkE='<span style="font-size: 1.0em; color:red;">❌</span>' }
 board.update();
@@ -395,7 +395,7 @@ break;
 default:
 nameRef.chkd=true;
 if (mrk == 1) {
-nameRef.p[indx] = '<span style="font-size: 1.5em; color:green;">✔</i>'
+nameRef.p[indx] = '<span style="font-size: 1.5em; color:green;">✔</span>'
     } else {
     {
     nameRef.p[indx] = '<span style="font-size: 1.5em; color:red;">❌</span>';
