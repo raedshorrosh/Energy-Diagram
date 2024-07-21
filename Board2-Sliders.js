@@ -364,48 +364,57 @@ var checkAnswer= function(indx, mrk) {
 switch (indx) {
 case 6:
 if (mrk == 1) {
-nameRef.reacttxt = '<i class="fa fa-check"></i>' + nameRef.reacttxt;
+nameRef.reacttxt = '✔' + nameRef.reacttxt;
 } else {
-nameRef.reacttxt = '<span style="font-size: 1.0em; color:red;"><i class="fa fa-times"></i> </span>' + nameRef.reacttxt;
+nameRef.reacttxt = '<span style="font-size: 1.0em; color:red;">❌ </span>' + nameRef.reacttxt;
 }
 board.update();
 break;
 case 7:
 if (mrk == 1) {
-nameRef.prodtxt = '<i class="fa fa-check"></i>' + nameRef.prodtxt;
+nameRef.prodtxt = '✔' + nameRef.prodtxt;
 } else {
-nameRef.prodtxt = '<span style="font-size: 1.0em; color:red;"><i class="fa fa-times"></i> </span>' + nameRef.prodtxt;
+nameRef.prodtxt = '<span style="font-size: 1.0em; color:red;">❌ </span>' + nameRef.prodtxt;
 }
 board.update();
 break;
 case 8:
 if (mrk == 1) {
-nameRef.mrkH='<span style="font-size: 1.25em; color:green;"><i class="fa fa-check"></i></span>'}
+nameRef.mrkH='<span style="font-size: 1.25em; color:green;">✔</i></span>'}
 else {
-nameRef.mrkH='<span style="font-size: 1.0em; color:red;"><i class="fa fa-times"></i></span>' }
+nameRef.mrkH='<span style="font-size: 1.0em; color:red;">❌</span>' }
 board.update();
 break;
 case 9:
 if (mrk == 1) {
-nameRef.mrkE='<span style="font-size: 1.25em; color:green;"><i class="fa fa-check"></i></span>'}
+nameRef.mrkE='<span style="font-size: 1.25em; color:green;">✔></i></span>'}
 else {
-nameRef.mrkE='<span style="font-size: 1.0em; color:red;"><i class="fa fa-times"></i></span>' }
+nameRef.mrkE='<span style="font-size: 1.0em; color:red;">❌</span>' }
 board.update();
 break;
 default:
 nameRef.chkd=true;
 if (mrk == 1) {
-nameRef.p[indx] = '<span style="font-size: 1.5em; color:green;"><i class="fa fa-check"></i>'
+nameRef.p[indx] = '<span style="font-size: 1.5em; color:green;">✔</i>'
     } else {
     {
-    nameRef.p[indx] = '<span style="font-size: 1.5em; color:red;"><i class="fa fa-times"></i></span>';
+    nameRef.p[indx] = '<span style="font-size: 1.5em; color:red;">❌</span>';
     }
     board.update(); }
     }
     };
-    let feedback={#feedback#};var fdbk=document.getElementById("div"); fdbk.setAttribute("id",{#rqm#});
-    if ( feedback==1) {document.getElementById({#rqm#}).style.display = "block"}
-    else {document.getElementById({#rqm#}).style.display = "none"};
+   
+
+stack_js.get_content({#rqm#}).then((content) => {
+if (content !== null) {
+// As the content is not null this means the span is present so feedback is displayed and we can react to it here
+if  ( !(nameRef.chkd)) {
+ nameRef.chkd=true;
+let grade =JSON.parse(content);
+for (let i = 0; i !=12; i++) {checkAnswer(i,grade[i])};
+console.log(grade);
+board.update();  
+}}});
 
 
     [[/jsxgraph]]
