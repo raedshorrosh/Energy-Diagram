@@ -314,14 +314,16 @@ board.update();
 //------draw text---------
 
 var rctOndrag=function(){
-var newState = {'x':reactants.X(), 'y':reactants.Y()};
-stateInput.value = JSON.stringify(newState);stateInput.dispatchEvent(new Event('change'));
 board.update();
+var newState = {'x':reactants.X(), 'y':reactants.Y()};
+stateInput.value = JSON.stringify(newState);
+stateInput.dispatchEvent(new Event('change'));
 };
 var prdOndrag=function(){
-var newState = {'x':products.X(), 'y':products.Y()};
-stateInput2.value = JSON.stringify(newState);stateInput2.dispatchEvent(new Event('change'));
 board.update();
+var newState = {'x':products.X(), 'y':products.Y()};
+stateInput2.value = JSON.stringify(newState);
+stateInput2.dispatchEvent(new Event('change'));
 };
 
 s.on('drag',rctOndrag);
@@ -354,7 +356,6 @@ b_arp3.moveTo([a_arp3.X(), b_arp3.Y()]);
 a_arp3.moveTo([a_arp3.X(),a_arp3.Y()]);
 
 });
-
 
 
 let rqm={#rqm#};
